@@ -1,0 +1,9 @@
+CREATE 
+(p:Person{}),
+(c:City{}),
+(a:Activity{}),
+(p)-[:TRAVELS_TO]->(c),
+(p)-[:LIKES_TO_DO]->(a),
+(a)-[:IS_PERFORMED_IN]->(c),
+(c)-[:HOSTS]->(a),
+(p)-[:DEPARTURES_FROM]->(c)

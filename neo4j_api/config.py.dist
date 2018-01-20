@@ -1,0 +1,9 @@
+neo_credentials = {
+    "host": "127.0.0.0.1", # NEO4J HOST
+    "port": "7687", # NEO4J PORT
+    "user": "neo4j", # NEO4J USER
+    "auth": "NEO4J_PASSWORD" # NEO4J PASSWORD
+}
+
+#Debug status
+debug = True
