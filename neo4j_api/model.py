@@ -1,5 +1,6 @@
 from neo4j.v1 import GraphDatabase, basic_auth
 from test_model_interface import PersonGenerator
+import requests
 
 def get_neo4j_connection(host, port, user, auth):
     """
@@ -123,3 +124,12 @@ class GraphManager:
                 )
             print("Finished %s of %s" % (str(x+1), str(limit)))
 
+
+class ApiManager:
+    minube = None
+    hotelscombined = None
+    bbva = None
+
+    def __init__(self, **kwargs):
+        if 'minube_key' in kwargs:
+            self.minube = kwargs['minube_key']

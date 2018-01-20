@@ -1,0 +1,18 @@
+CREATE
+  (p:Person),
+  (a:Activity),
+  (pur:Purpose),
+  (t:Travel),
+  (c:City),
+  (h:Hotel),
+  (po:Pois),
+  (p)-[:GOES_IN_A]->(t),
+  (p)-[:LIKES_TO_DO]->(a),
+  (t)<-[:DESTINY_OF]-(c),
+  (t)-[:TRAVEL_PURPOSE]->(pur),
+  (a)-[:IS_PERFORMED_IN]->(c),
+  (pur)-[:REASON_OF_TRAVEL_OF]->(p),
+  (p)-[:LIVES_IN]->(c),
+  (po)-[:LOCATED_IN]->(c),
+  (h)<-[:HOSTS]-(t),
+  (h)-[:HOTEL_LOCATED_IN]->(c)
