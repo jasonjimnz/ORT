@@ -1,2 +1,4 @@
 flask
 neo4j-driver
+faker
+requests
