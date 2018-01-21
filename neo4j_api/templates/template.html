@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+
+    <title>ORT</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+          <h1 class="display-4">Open Recomendation Tourism</h1>
+          <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis dicta, dolor dolore in minus quidem repudiandae vero? Amet consectetur doloribus, eos eum fugit non quos repudiandae sed voluptas voluptate!
+          </p>
+
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque error explicabo magni sapiente? Alias, amet commodi doloremque exercitationem hic id inventore nulla obcaecati placeat recusandae sapiente tempora totam unde voluptas!
+          </p>
+          <div class="lead">
+              <h3>Busca destinos basados en nuestro sistema de recomendación</h3>
+              <form class="row">
+                  <div class="form-group col-sm-4">
+                    <label for="origin">Origen</label>
+                    <input type="text" class="form-control" id="origin" aria-describedby="originHelp" placeholder="Introduce origen">
+                    <small id="originHelp" class="form-text text-muted">Introduce desde donde vas a viajar para ofrecerte mejores resultados</small>
+                  </div>
+
+                  <div class="form-group col-sm-4">
+                    <label for="destiny">Destino</label>
+                    <input type="text" class="form-control" id="destiny" aria-describedby="destinyHelp" placeholder="Introduce destino">
+                    <small id="destinyHelp" class="form-text text-muted">Introduce a dónde vas a viajar para ofrecerte mejores resultados</small>
+                  </div>
+
+                  <div class="form-group col-sm-4">
+                    <label for="reason">Motivo del viaje</label>
+                    <input type="text" class="form-control" id="reason" aria-describedby="reasonHelp" placeholder="Introduce tu motivo de viaje">
+                    <small id="reasonHelp" class="form-text text-muted">Introduce tu motivo del viaje para ofrecerte mejores resultados, y alojamientos cercanos en la medida de lo posible</small>
+                  </div>
+                  <div class="form-group col-sm-12">
+                    <label for="interests">Intereses</label>
+                    <input type="text" class="form-control" id="interests" aria-describedby="interestsHelp" placeholder="Introduce tus Intereses separados por comas">
+                    <small id="interestsHelp" class="form-text text-muted">Introduce tus intereses en actividades en tu viaje para ofrecerte mejores resultados</small>
+                  </div>
+
+                  <div class="form-group col-sm-12">
+                    <button type="submit" class="btn btn-primary">Buscar destinos</button>
+                  </div>
+                </form>
+          </div>
+        </div>
+        <div class="row resultsContainer container-fluid row">
+            <!-- TODO: Aquí los resultados -->
+            <div class="alert alert-info col-sm-6 offset-sm-3">
+                <p>Se han encontrado 4 resultados, basándonos en tus criterios de búsqueda</p>
+            </div>
+            <div class="resultList row col-sm-12">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Madrid</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque dolorum earum eius fugiat, id in ipsa magni provident quos ratione, soluta tempore, vel! Eveniet, laborum, quae? Facilis, quaerat, tempore.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver lugares de interés</a>
+                    <a href="#" class="btn btn-primary">Ver hoteles cercanos</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Toledo</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam dignissimos error minus nobis odit officia ullam. Alias at aut consequuntur corporis delectus ea, laboriosam nemo pariatur quis rerum sit?
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver lugares de interés</a>
+                    <a href="#" class="btn btn-primary">Ver hoteles cercanos</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Segovia</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid earum eos laboriosam porro quia temporibus vero. Dignissimos, totam velit? Consequatur eligendi eos eveniet excepturi fugit incidunt natus nesciunt quam quasi.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver lugares de interés</a>
+                    <a href="#" class="btn btn-primary">Ver hoteles cercanos</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Guadalajara</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus distinctio eius exercitationem illo labore molestias nemo officiis possimus provident, quas. Accusantium consectetur corporis illum impedit in labore minima quasi repudiandae.</p>
+                    <a href="#" class="btn btn-primary">Ver lugares de interés</a>
+                    <a href="#" class="btn btn-primary">Ver hoteles cercanos</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- TODO: Mostrar Destinos -->
+            <!-- TODO: Mostrar lugares de interes ceranos -->
+            <!-- TODO: Mostrar hoteles cercanos -->
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js')}}"></script>
+  </body>
+  <script>
+      function buildResultCard(city, cityID, description){
+          container = $('<div class="col-sm-6">');
+          mainCard = $('<div class="card">');
+          body = $('<div class="card-body>');
+          title = $('<h5 class="card-title">').append(city);
+          if (description){
+              descriptionContainer = $('<p class="card-text">').append(description);
+          } else {
+              descriptionContainer = $('<p class="card-text">');
+          }
+      }
+  </script>
+</html>
