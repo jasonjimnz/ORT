@@ -5,3 +5,18 @@ curl -X GET http://localhost:8080/api/v1/rest/destinations?origin=Madrid&destina
 curl -X GET http://129.158.65.166:9073/api/v1/rest/destinations?destination=madrid&origin=barcelona
 
 curl -X GET https://recomendationsTurism-gse00012327.apaas.us6.oraclecloud.com/api/v1/rest/destinations?destination=madrid
+
+- Interfaz web local y pass de oracle
+http://localhost:8080/web
+https://recommendationtourism-gse00012327.apaas.us2.oraclecloud.com/web
+
+-Interfaz rest que espone el servicio en el pass de oracle
+curl -X GET https://recommendationtourism-gse00012327.apaas.us2.oraclecloud.com/api/v1/rest/destinations?destination=madrid
+
+
+
+-En el pass oracle el jar debe zipearse y subirse con el archivo de manifiesto
+
+tar cvf recommendation-tourism-0.1.0.jar.tar recommendation-tourism-0.1.0.jar
+
+gzip recommendation-tourism-0.1.0.jar.tar

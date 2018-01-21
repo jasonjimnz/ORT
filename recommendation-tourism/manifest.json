@@ -1,0 +1,7 @@
+{
+  "runtime": {
+    "majorVersion": "8"
+  },
+  "command": "java -Dserver.port=$PORT -jar recommendation-tourism-0.1.0.jar",
+  "notes": "Springbot recommendation-tourism."
+}
