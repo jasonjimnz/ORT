@@ -27,13 +27,23 @@
               <form class="row">
                   <div class="form-group col-sm-4">
                     <label for="origin">Origen</label>
-                    <input type="text" class="form-control" id="origin" aria-describedby="originHelp" placeholder="Introduce origen">
+                    <!--<input type="text" class="form-control" id="origin" aria-describedby="originHelp" placeholder="Introduce origen">-->
+                      <select name="origin" class="form-control" id="origin">
+                          {% for c in cities %}
+                          <option value="{{c}}">{{c}}</option>
+                          {% endfor %}
+                      </select>
                     <small id="originHelp" class="form-text text-muted">Introduce desde donde vas a viajar para ofrecerte mejores resultados</small>
                   </div>
 
                   <div class="form-group col-sm-4">
                     <label for="destiny">Destino</label>
-                    <input type="text" class="form-control" id="destiny" aria-describedby="destinyHelp" placeholder="Introduce destino">
+                    <!--<input type="text" class="form-control" id="destiny" aria-describedby="destinyHelp" placeholder="Introduce destino">-->
+                      <select name="destiny" class="form-control" id="destiny">
+                          {% for c in cities %}
+                          <option value="{{c}}">{{c}}</option>
+                          {% endfor %}
+                      </select>
                     <small id="destinyHelp" class="form-text text-muted">Introduce a dónde vas a viajar para ofrecerte mejores resultados</small>
                   </div>
 
@@ -123,13 +133,22 @@
       function buildResultCard(city, cityID, description){
           container = $('<div class="col-sm-6">');
           mainCard = $('<div class="card">');
-          body = $('<div class="card-body>');
+          bodyCard = $('<div class="card-body>');
           title = $('<h5 class="card-title">').append(city);
           if (description){
               descriptionContainer = $('<p class="card-text">').append(description);
           } else {
               descriptionContainer = $('<p class="card-text">');
           }
+          poisBtn = $('<a href="#" class="btn btn-primary poisBtn">').attr('city_id', cityID);
+          hotelBtn = $('<a href="#" class="btn btn-primary hotelsBtn">').attr('city_id', cityID);
+          bodyCard.append(title);
+          bodyCard.append(descriptionContainer);
+          bodyCard.append(poisBtn);
+          bodyCard.append(hotelBtn);
+          mainCard.append(bodyCard);
+          container.append(mainCard);
+          return container;
       }
   </script>
 </html>
