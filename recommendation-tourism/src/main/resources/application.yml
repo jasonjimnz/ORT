@@ -1,0 +1,9 @@
+persistence:
+  databases:
+    oracle-hotelweb:
+      url: jdbc:oracle:thin:@//129.158.75.37:1521/PDB04.gse00012327.oraclecloud.internal
+      username: hackatrip04
+      password: welcome1
+      driver: oracle.jdbc.driver.OracleDriver
+      default-auto-commit: false
+      default-read-only: false
